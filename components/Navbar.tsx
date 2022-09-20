@@ -1,22 +1,11 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import axios from 'axios';
 
-const Navbar = () => {
-    const [cryptoPrices, setCryptoPrices] = useState<{ ethPrice: number; btcPrice: number }>();
+interface INavbar {
+    cryptoPrices: { ethPrice: number; btcPrice: number} | undefined;
+}
 
-    useEffect(() => {
-        const fetchPrices = async () => {
-            const ethPrice = await axios.get("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
-            const btcPrice = await axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
-            setCryptoPrices({
-                ethPrice: ethPrice.data.ethereum.usd as number,
-                btcPrice: btcPrice.data.bitcoin.usd as number
-            });
-        }
-
-        fetchPrices().catch(e => console.log(e));
-    }, []);
+const Navbar = (props: INavbar) => {
+    const [cryptoPrices] = [props.cryptoPrices];
     return (
         <div className="w-full h-28 flex justify-center items-center">
             <div className="w-full h-full flex">
