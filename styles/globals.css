@@ -15,6 +15,10 @@
 	background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #f12711, #f5af19)
 }
 
+.link-underline-green {
+	background-image: linear-gradient(transparent, transparent), linear-gradient(to right, #11998e, #38ef7d)
+}
+
 .link-underline:hover {
 	background-size: 100% 3px;
 	background-position: 0 100%
@@ -22,6 +26,13 @@
 
 .text-gradient {
 	background: linear-gradient(90deg, #f12711, #f5af19 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+	background: linear-gradient(90deg, #11998e, #38ef7d 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
