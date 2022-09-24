@@ -48,7 +48,7 @@ const Home = () => {
                 <title>Landon Boles</title>
             </Head>
             {modalOpen && <Modal setModalOpen={setModalOpen} />}
-            <div className="flex min-h-screen flex-col space-y-8 items-center justify-center py-12 px-24 bg-site-black">
+            <div className="flex min-h-screen flex-col space-y-8 items-center justify-center p-4 md:py-12 md:px-24 bg-site-black overflow-x-hidden">
                 <div className="w-full flex flex-col space-y-4">
                     <h1 className="font-poppins text-site-white text-5xl font-bold">Landon Boles</h1>
                     <h1 className="font-poppins text-site-white text-2xl font-bold">17 year old new-grad software engineer.</h1>
@@ -65,11 +65,12 @@ const Home = () => {
                 </div>
                 <div className="w-full flex flex-col space-y-4">
                     <h1 className="font-poppins text-5xl font-bold grad-text pb-2 from-[#11998e] to-[#38ef7d]">Experience & Projects 🔨</h1>
-                    <div className="flex space-x-2">
+                    <div className="flex-col sm:flex-row space-x-2 hidden sm:flex">
                         <h1 className="font-poppins font-semibold text-2xl text-site-white">Technologies I am comforatable with:</h1>
                         {technologies.map(technology => (
-                            <h1 key={technology.name} className={`font-poppins font-semibold text-lg ${technology.color}`}>{technology.name}</h1>
+                            <h1 key={technology.name} className={`font-poppins font-semibold text-lg ${technology.color}`}>{technology.name} </h1>
                         ))}
+
                         <h1 className="font-poppins font-semibold text-lg text-green-300">... and many more</h1>
                     </div>
                     <ExpCard company="SpringsIT" title="Intern SWE" href="https://springsit.com" color="text-blue-400" border="border-blue-400" desc="Worked in a small team to build out and scale blazingly fast backend architecture using C# and Docker" img="/SpringsIT.png" />

@@ -6,12 +6,12 @@ interface IModal {
 const Modal = (props: IModal) => {
     return (
         <div onClick={() => props.setModalOpen(false)} className="w-screen h-screen absolute bg-site-black/75 flex justify-center items-center">
-            <div onClick={e => e.stopPropagation()} className="w-1/3 h-auto p-6 bg-site-black border border-site-white rounded-xl drop-shadow-2xl flex flex-col space-y-4 items-center relative">
+            <div onClick={e => e.stopPropagation()} className="w-full h-auto p-6 bg-site-black border border-site-white rounded-xl drop-shadow-2xl flex flex-col space-y-4 items-center relative">
             <div onClick={e => {
                 e.stopPropagation();
                 e.preventDefault();
                 props.setModalOpen(false);
-            }} className="w-14 h-14 bg-red-400/60 rounded-lg flex justify-center items-center up absolute top-6 right-6">
+            }} className="w-14 h-14 bg-red-400/60 rounded-lg hidden sm:flex justify-center items-center up absolute top-6 right-6">
                         <h1 className="font-poppins text-3xl font-bold text-site-white">X</h1>
                     </div>
                 <h1 className="font-poppins text-site-white font-bold text-5xl">Contact Me</h1>

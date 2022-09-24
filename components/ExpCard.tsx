@@ -13,8 +13,8 @@ interface IExpCard {
 const ExpCard = (props: IExpCard) => {
     const router = useRouter();
     return (
-        <div onClick={() => router.push(props.href)} className={`w-2/3 flex border-2 p-2 rounded-xl ${props.border} up`}>
-            <div className="w-[1/8] h-full flex shrink-0 justify-center items-center">
+        <div onClick={() => router.push(props.href)} className={`w-full sm:w-2/3 flex border-2 p-2 rounded-xl ${props.border} up`}>
+            <div className="w-[1/8] flex shrink-0 justify-center items-center">
                 <img src={props.img} className="w-24 rounded-lg" />
             </div>
             <div className="h-full flex flex-col justify-center px-2">

@@ -13,7 +13,7 @@ interface IProjectCard {
 const ProjectCard = (props: IProjectCard) => {
     const router = useRouter();
     return (
-        <div onClick={() => router.push(props.href)} className={`w-2/3 flex border-2 p-2 rounded-xl ${props.border} up`}>
+        <div onClick={() => router.push(props.href)} className={`w-full sm:w-2/3 flex border-2 p-2 rounded-xl ${props.border} up`}>
             <div className="h-full flex flex-col justify-center px-2">
                 {props.wip && (
                     <div className="w-20 h-6 bg-purple-400/80 rounded-full flex justify-center items-center">
