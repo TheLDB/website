@@ -38,6 +38,10 @@ const Home = () => {
             color: "text-orange-500"
         }
     ]
+
+    const getRandomInt = () => {
+        return Math.floor(Math.random() * 10000)
+    }
     return (
         <>
             <Head>
@@ -55,7 +59,7 @@ const Home = () => {
                 <div className="w-full flex flex-col space-y-4">
                     <h1 className="font-poppins text-5xl font-bold grad-text from-[#FDC830] to-[#F37335]">About Me 👋</h1>
                     <h1 className="font-poppins text-site-white text-xl font-normal">I got into programming in 2012 when I got my first laptop, and wrote my very first executable script in <span className="font-bold grad-text from-[#FF416C] to-[#FF4B2B]">Ruby! 💎</span></h1>
-                    <h1 className="font-poppins text-site-white text-xl font-normal">Since then, I've developed my skillset, and grown a passion for developing all around. Whether it's exploring new technologies and frameworks, or writing blazing fast systems.</h1>
+                    <h1 className="font-poppins text-site-white text-xl font-normal">Since then, I&apos;ve developed my skillset, and grown a passion for developing all around. Whether it&apos;s exploring new technologies and frameworks, or writing blazing fast systems.</h1>
                     <h1 className="font-poppins grad-text from-[#2193b0] to-[#6dd5ed] font-bold text-3xl">Hobbies 🏔️</h1>
                     <h1 className="font-poppins text-site-white text-xl font-normal">In my free time, I enjoying snowboarding, playing with my dog (2 year old Bernedoodle 🐶), and overall spending time with family and friends.</h1>
                 </div>
@@ -64,7 +68,7 @@ const Home = () => {
                     <div className="flex space-x-2">
                         <h1 className="font-poppins font-semibold text-2xl text-site-white">Technologies I am comforatable with:</h1>
                         {technologies.map(technology => (
-                            <h1 className={`font-poppins font-semibold text-lg ${technology.color}`}>{technology.name}</h1>
+                            <h1 key={technology.name} className={`font-poppins font-semibold text-lg ${technology.color}`}>{technology.name}</h1>
                         ))}
                         <h1 className="font-poppins font-semibold text-lg text-green-300">... and many more</h1>
                     </div>

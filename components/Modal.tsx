@@ -1,6 +1,4 @@
-import { MotionConfig } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
-import { motion } from 'framer-motion';
 interface IModal {
     setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
@@ -17,9 +15,9 @@ const Modal = (props: IModal) => {
                         <h1 className="font-poppins text-3xl font-bold text-site-white">X</h1>
                     </div>
                 <h1 className="font-poppins text-site-white font-bold text-5xl">Contact Me</h1>
-                <a target={"_blank"} href="mailto:ldb@erikboles.com" className="font-poppins text-green-300 font-semibold text-3xl">Email me</a>
-                <a target={"_blank"} href="https://www.linkedin.com/in/landon-boles-16b686143/" className="font-poppins text-blue-400 font-semibold text-3xl">Linkedin</a>
-                <a target={"_blank"} href="https://twitter.com/landon_xyz" className="font-poppins text-blue-400 font-semibold text-3xl">Twitter</a>
+                <a target={"_blank"} rel="noreferrer" href="mailto:ldb@erikboles.com" className="font-poppins text-green-300 font-semibold text-3xl">Email me</a>
+                <a target={"_blank"} rel="noreferrer" href="https://www.linkedin.com/in/landon-boles-16b686143/" className="font-poppins text-blue-400 font-semibold text-3xl">Linkedin</a>
+                <a target={"_blank"} rel="noreferrer" href="https://twitter.com/landon_xyz" className="font-poppins text-blue-400 font-semibold text-3xl">Twitter</a>
 
             </div>
         </div>
