@@ -8,5 +8,5 @@ a {
 }
 
 li {
-    @apply text-lg
+    @apply text-md
 }
