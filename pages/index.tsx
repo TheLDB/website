@@ -1,86 +1,67 @@
-import { motion } from "framer-motion";
-import Head from "next/head";
-import { useState } from "react";
-import ExpCard from "../components/ExpCard";
-import Modal from "../components/Modal";
-import ProjectCard from "../components/ProjectCard";
+import Head from "next/head"
 
 const Home = () => {
-    const [modalOpen, setModalOpen] = useState(false);
-
-    interface Technology {
-        name: string;
-        color: string;
-    }
-    const technologies: Technology[] = [
-        {
-            name: "Typescript,",
-            color: "text-blue-400"
-        },
-        {
-            name: "Rust,",
-            color: "text-orange-400"
-        },
-        {
-            name: "C#,",
-            color: "text-purple-400"
-        },
-        {
-            name: "Next,",
-            color: "text-site-white"
-        },
-        {
-            name: "Docker,",
-            color: "text-blue-400"
-        },
-        {
-            name: "AWS, ",
-            color: "text-orange-500"
-        }
-    ]
-
-    const getRandomInt = () => {
-        return Math.floor(Math.random() * 10000)
-    }
     return (
         <>
             <Head>
                 <title>Landon Boles</title>
             </Head>
-            {modalOpen && <Modal setModalOpen={setModalOpen} />}
-            <div className="flex min-h-screen flex-col space-y-8 items-center justify-center p-4 md:py-12 md:px-24 bg-site-black overflow-x-hidden">
-                <div className="w-full flex flex-col space-y-4">
-                    <h1 className="font-poppins text-site-white text-5xl font-bold">Landon Boles</h1>
-                    <h1 className="font-poppins text-site-white text-2xl font-bold">17 year old new-grad software engineer.</h1>
-                    <button onClick={() => setModalOpen(true)} className="w-28 h-12 bg-gradient-to-r bg-blue-400 text-site-white font-poppins font-semibold rounded-xl up">
-                        Contact Me
-                    </button>
-                </div>
-                <div className="w-full flex flex-col space-y-4">
-                    <h1 className="font-poppins text-5xl font-bold grad-text from-[#FDC830] to-[#F37335]">About Me 👋</h1>
-                    <h1 className="font-poppins text-site-white text-xl font-normal">I got into programming in 2012 when I got my first laptop, and wrote my very first executable script in <span className="font-bold grad-text from-[#FF416C] to-[#FF4B2B]">Ruby! 💎</span></h1>
-                    <h1 className="font-poppins text-site-white text-xl font-normal">Since then, I&apos;ve developed my skillset, and grown a passion for developing all around. Whether it&apos;s exploring new technologies and frameworks, or writing blazing fast systems.</h1>
-                    <h1 className="font-poppins grad-text from-[#2193b0] to-[#6dd5ed] font-bold text-3xl">Hobbies 🏔️</h1>
-                    <h1 className="font-poppins text-site-white text-xl font-normal">In my free time, I enjoying snowboarding, playing with my dog (2 year old Bernedoodle 🐶), and overall spending time with family and friends.</h1>
-                </div>
-                <div className="w-full flex flex-col space-y-4">
-                    <h1 className="font-poppins text-5xl font-bold grad-text pb-2 from-[#11998e] to-[#38ef7d]">Experience & Projects 🔨</h1>
-                    <div className="flex-col sm:flex-row space-x-2 hidden sm:flex">
-                        <h1 className="font-poppins font-semibold text-2xl text-site-white">Technologies I am comforatable with:</h1>
-                        {technologies.map(technology => (
-                            <h1 key={technology.name} className={`font-poppins font-semibold text-lg ${technology.color}`}>{technology.name} </h1>
-                        ))}
+            <div className="w-screen min-h-screen bg-white p-8 flex flex-col space-y-2">
+                <h1 className="text-4xl font-poppins font-semibold">Landon Boles</h1>
+                <p className="text-2xl font-poppins font-medium">17 | colorado | swe</p>
+                <p className="text-2xl font-poppins font-medium"><a target="_blank" rel="noreferrer" href="mailto:ldb@erikboles.com">email me</a> | <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB">github</a> | <a target="_blank" rel="noreferrer" href="https://twitter.com/landon_xyz">bird app</a></p>
+                <p className="text-2xl font-poppins font-semibold underline">@lndnNFT on <a target="_blank" rel="noreferrer" href="https://farcaster.xyz">Farcaster</a></p>
 
-                        <h1 className="font-poppins font-semibold text-lg text-green-300">... and many more</h1>
+                <h1 className="text-3xl font-poppins font-semibold">building:</h1>
+                <div className="flex flex-col space-y-4">
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/farcaster-rs">🦀 farcaster-rs</a>
+                        <li>farcaster-rs is a Rust crate used to interface & interact with the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> smart contracts & API</li>
+                        <li>Built using Rust, Tokio, ethers-rs & more</li>
                     </div>
-                    <ExpCard company="SpringsIT" title="Intern SWE" href="https://springsit.com" color="text-blue-400" border="border-blue-400" desc="Worked in a small team to build out and scale blazingly fast backend architecture using C# and Docker" img="/SpringsIT.png" />
-                    <ExpCard company="Classmates Delivery" title="Co-Founder" href="/" color="text-orange-400" border="border-orange-400" desc="Built a school focused food delivery startup with a classmate. Launched in 1 school and talked to several others before COVID-19." img="/Classmates.png" />
+
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/degenslacker">🍕 degenslacker</a>
+                        <li>degenslacker is a web app for the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> ecosystem which allows you to create "feeds" and get webhook notifications every time a monitored user sends a cast</li>
+                        <li>Built using Typescript, Next, Axios, and more.</li>
+                    </div>
                 </div>
-                <div className="w-full flex flex-col space-y-4">
-                    <ProjectCard title="Nuitaka" href="https://github.com/Nuitaka" color="text-blue-300" border="border-blue-300" desc="Nuitaka is the first escrow service for NFT projects. We're building a way to reduce the amount of scams and keep founders reliable in their spending, while maintaining decentralization and trustless architecture." languages={["Typescript, ", "Rust, ", "Docker, ", "Solidity"]} wip={false} />
-                    <ProjectCard title="Degenslacker" href="https://github.com/TheLDB/degenslacker" color="text-orange-300" border="border-orange-300" desc="Built a web app for Farcaster that allows users to monitor users casts and get a webhook notification every time they send a cast." languages={["Typescript"]} wip={true} />
-                    <ProjectCard title="farcaster-rs" href="https://github.com/TheLDB/farcaster-rs" color="text-purple-400" border="border-purple-400" desc="A rust crate that allows for interaction with the Farcaster V2 contracts & APIs via Rust" languages={["Rust"]} wip={true} />
-                    <ProjectCard title="Hopdown" href="https://github.com/TheLDB/hopdown" color="text-blue-400" border="border-blue-400" desc="A realtime, collaborative Markdown editor built for a 48 hour hackathon. Powered by hop.io" languages={["Typescript"]} wip={false} />
+
+                <h1 className="text-3xl font-poppins font-semibold pt-12">worked:</h1>
+                <div className="flex flex-col space-y-4">
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="https://springsit.com">🤖 SpringsIT - Software Engineering Intern</a>
+                        <h2 className="text-xl">Jun 2021 - Aug 2021</h2>
+                        <li>Developed & deployed backend architecture in <span className="font-bold">C#, .NET, Docker, and more</span></li>
+                        <li>Developed & deployed frontend web apps with <span className="font-bold">Angular, CSS, Docker, an more</span></li>
+                        <li>Worked in a small team of 3 to design and build out different backend & frontend designs & systems for a variety of clients.</li>
+
+                    </div>
+
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="/">🍔 Classmates Delivery - Co-Founder</a>
+                        <h2 className="text-xl">Jan 2021 - Dec 2021</h2>
+                        <li>Designed and built microservices that enabled students to order food from local restuarants by leveraging online ordering endpoints using <span className="font-bold">Javascript, Express, Puppeteer, & more</span></li>
+                        <li>Designed and built a web app & started work on an iOS app that provided students with an easy and accessible way to order food using <span className="font-bold">React, Axios, Swift, Alamofire, & more</span></li>
+                        <li>Launched in 1 local school and talked to multiple other schools before the COVID-19 pandemic</li>
+                    </div>
+                </div>
+
+                <h1 className="text-3xl font-poppins font-semibold pt-12">built:</h1>
+                <div className="flex flex-col space-y-4">
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/ratio_terminal_rust">💯 ratio_terminal_rust</a>
+                        <li>A Rust rewrite of the original Ratio Terminal (JS) Discord bot</li>
+                        <li>Built using Rust, Serenity, Tokio & more</li>
+                    </div>
+
+                    <div className="flex flex-col space-y-2">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/HopDown">🐰 HopDown</a>
+                        <li>A web app built for the 48 hour <a target="_blank" rel="noreferrer" href="https://buildergroop.com" className="text-lg">Buildergroop</a> hackathon</li>
+                        <li>A realtime, collaborative Markdown editor that allows you and your team to work together on documentation more efficiently</li>
+                        <li>Built using Typescript, Next, <a target="_blank" rel="noreferrer" href="https://hop.io" className="text-lg">Hop</a> & more</li>
+
+                    </div>
                 </div>
             </div>
         </>

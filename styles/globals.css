@@ -3,12 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .grad-text {
-        @apply text-transparent bg-clip-text bg-gradient-to-r
-    }
+a {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 text-2xl
+}
 
-    .up {
-        @apply hover:-translate-y-2 transition-all duration-300 ease-in-out hover:cursor-pointer
-    }
+li {
+    @apply text-lg
 }
