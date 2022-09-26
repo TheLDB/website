@@ -22,7 +22,7 @@ const Home = () => {
 
                     <div className="flex flex-col space-y-2">
                         <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/degenslacker">🍕 degenslacker</a>
-                        <li>degenslacker is a web app for the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> ecosystem which allows you to create "feeds" and get webhook notifications every time a monitored user sends a cast</li>
+                        <li>degenslacker is a web app for the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> ecosystem which allows you to create &quot;feeds&quot; and get webhook notifications every time a monitored user sends a cast</li>
                         <li>Built using Typescript, Next, Axios, and more.</li>
                     </div>
                 </div>
