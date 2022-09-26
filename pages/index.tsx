@@ -5,6 +5,14 @@ const Home = () => {
         <>
             <Head>
                 <title>Landon Boles</title>
+                <meta name="title" content="Landon Boles" />
+                <meta
+                    name="description"
+                    content="Landon Boles - 17yr old software engineer from Colorado ❄️"
+                />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+                <meta name="theme-color" content="#e67e22" />
             </Head>
             <div className="w-screen min-h-screen bg-white p-8 flex flex-col space-y-2">
                 <h1 className="text-4xl font-poppins font-semibold">Landon Boles</h1>
