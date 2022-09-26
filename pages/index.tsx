@@ -16,21 +16,21 @@ const Home = () => {
             </Head>
             <div className="w-screen min-h-screen bg-white p-8 flex flex-col space-y-2">
                 <h1 className="text-3xl font-poppins font-semibold">Landon Boles</h1>
-                <p className="text-md font-poppins font-medium">17 | colorado | swe</p>
-                <p className="text-md font-poppins font-medium"><a target="_blank" rel="noreferrer" href="mailto:ldb@erikboles.com">email me</a> | <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB">github</a> | <a target="_blank" rel="noreferrer" href="https://twitter.com/landon_xyz">bird app</a></p>
-                <p className="text-md font-poppins font-semibold underline">@lndnNFT on <a target="_blank" rel="noreferrer" href="https://farcaster.xyz">Farcaster</a></p>
+                <p className="text-lg font-poppins font-medium">17 | colorado | swe</p>
+                <p className="text-lg font-poppins font-medium"><a target="_blank" rel="noreferrer" href="mailto:ldb@erikboles.com">email me</a> | <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB">github</a> | <a target="_blank" rel="noreferrer" href="https://twitter.com/landon_xyz">bird app</a></p>
+                <p className="text-lg font-poppins font-semibold underline">@lndnNFT on <a target="_blank" rel="noreferrer" href="https://farcaster.xyz">Farcaster</a></p>
 
                 <h1 className="text-xl font-poppins font-semibold">building:</h1>
                 <div className="flex flex-col space-y-4">
                     <div className="flex flex-col space-y-2">
                         <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/farcaster-rs">🦀 farcaster-rs</a>
-                        <li>farcaster-rs is a Rust crate used to interface & interact with the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-md">Farcaster</a> smart contracts & API</li>
+                        <li>farcaster-rs is a Rust crate used to interface & interact with the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> smart contracts & API</li>
                         <li>Built using Rust, Tokio, ethers-rs & more</li>
                     </div>
 
                     <div className="flex flex-col space-y-2">
                         <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/degenslacker">🍕 degenslacker</a>
-                        <li>degenslacker is a web app for the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-md">Farcaster</a> ecosystem which allows you to create &quot;feeds&quot; and get webhook notifications every time a monitored user sends a cast</li>
+                        <li>degenslacker is a web app for the <a target="_blank" rel="noreferrer" href="https://farcaster.xyz" className="text-lg">Farcaster</a> ecosystem which allows you to create &quot;feeds&quot; and get webhook notifications every time a monitored user sends a cast</li>
                         <li>Built using Typescript, Next, Axios, and more.</li>
                     </div>
                 </div>
@@ -65,9 +65,9 @@ const Home = () => {
 
                     <div className="flex flex-col space-y-2">
                         <a target="_blank" rel="noreferrer" href="https://github.com/TheLDB/HopDown">🐰 HopDown</a>
-                        <li>A web app built for the 48 hour <a target="_blank" rel="noreferrer" href="https://buildergroop.com" className="text-md">Buildergroop</a> hackathon</li>
+                        <li>A web app built for the 48 hour <a target="_blank" rel="noreferrer" href="https://buildergroop.com" className="text-lg">Buildergroop</a> hackathon</li>
                         <li>A realtime, collaborative Markdown editor that allows you and your team to work together on documentation more efficiently</li>
-                        <li>Built using Typescript, Next, <a target="_blank" rel="noreferrer" href="https://hop.io" className="text-md">Hop</a> & more</li>
+                        <li>Built using Typescript, Next, <a target="_blank" rel="noreferrer" href="https://hop.io" className="text-lg">Hop</a> & more</li>
 
                     </div>
                 </div>
